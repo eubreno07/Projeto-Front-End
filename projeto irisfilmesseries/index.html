@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iris - Assista aos melhores conteúdos</title>
+  <link rel="shortcut icon" href="IRIS_ICO.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nos.css">
+
+</head>
+
+<body class="dark-mode">
+  <header>
+    <div class="logo">IRIS</div>
+
+    <div class="nav-center">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="login.html" class="login-link">Entrar</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </header>
+
+  <section class="hero">
+    <h1>Filmes, séries e muito mais. Sem limites.</h1>
+    <p>Assista onde quiser. Cancele quando quiser.</p>
+    <a href="planos.html#planos" class="btn">ASSINE AGORA</a>
+  </section>
+
+  <div class="emalta">
+    <h2>Em Alta:</h2>
+  </div>
+
+  <!-- FILMES -->
+  <section aria-label="Lista de Filmes" class="secao-carrossel">
+    <button class="btn-carrossel esquerda" onclick="scrollCarrossel(-1)">❮</button>
+    <div class="carrossel-wrapper">
+      <div class="horizontal" id="carrossel-filmes">
+        <article class="container">
+          <img src="./img/taxi-driver.jpg" class="img2" alt="Poster de Taxi Driver"
+            onclick="abrirModal('modal-taxi')" />
+          <div class="janela-modal" id="modal-taxi" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-taxi')">X</button>
+              <div class="img-modal">
+                <img src="/img/taxi-driver-poster.jpg" alt="taxi driver">
+                </div>
+              <div class="nomefilme">
+                <h2>Taxi Driver</h2>
+                <p class="descricao_filme">Taxi Driver (1976): Dirigido por Martin Scorsese, segue Travis Bickle (Robert
+                  De Niro), um ex-soldado do Vietnã que trabalha como taxista em Nova York. Sentindo-se alienado e
+                  incomodado pela violência e degradação ao seu redor, ele desenvolve uma obsessão por uma prostituta
+                  chamada Iris (Jodie Foster) e começa a planejar uma forma de "salvar" a cidade. O filme explora temas
+                  de solidão, violência e a alienação urbana, culminando em um clímax sangrento e imprevisível. É um
+                  estudo psicológico profundo, com uma das cenas mais icônicas da história do cinema: "You talkin' to
+                  me?"</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/PQhQWubUnws?si=qqdGA-DZ0QlieZ_x" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-taxi-driver.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/star wars III.jpg" class="img2" alt="Poster de Star Wars Episódio III"
+            onclick="abrirModal('modal-starwars')" />
+          <div class="janela-modal" id="modal-starwars" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-starwars')">X</button>
+              <div class="img-modal">
+                    <img src="./img/star-wars3-poster.jpg" alt="star wars ep 3">
+                </div>
+              <div class="nomefilme">
+                <h2>Star Wars EP III: A Vingança Dos Sith</h2>
+                <p class="descricao_filme">Star Wars: Episódio III - A Vingança dos Sith (2005): Mostra a queda de
+                  Anakin Skywalker, que, seduzido pelo lado sombrio da Força, se torna Darth Vader. O filme explora sua
+                  traição aos Jedi, a ascensão do Império sob o Chanceler Palpatine e a destruição da República
+                  Galáctica. Com a Ordem 66, os Jedi são quase exterminados, e o filme culmina na luta épica entre
+                  Anakin e Obi-Wan, marcando a transformação de Anakin no icônico vilão.</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/h5KJPq4X71Q?si=3g3tVWSXNRujtD2q" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-star-wars-ep3.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/godfatherII.jpg.jpg" class="img2" alt="Poster de O Poderoso Chefão Parte II"
+            onclick="abrirModal('modal-godfather')" />
+          <div class="janela-modal" id="modal-godfather" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-godfather')">X</button>
+              <div class="img-modal">
+                    <img src="./img/godfather2-poster.jpeg" alt="poderoso chefão 2">
+                </div>
+              <div class="nomefilme">
+                <h2>O Poderoso Chefão – Parte II</h2>
+                <p class="descricao_filme">O Poderoso Chefão: Parte II (1974): A história segue Michael Corleone, agora chefe da família, enquanto tenta expandir e proteger seus negócios. Paralelamente, flashbacks mostram a juventude de seu pai, Vito Corleone, desde sua infância na Sicília até sua ascensão como mafioso em Nova York. O filme explora poder, lealdade e corrupção, destacando a solidão crescente de Michael ao perder os valores da família.</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/FLbWXkka9wU?si=0U6BKljuRrwClcyM" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-o-poderoso-chefao-2.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/rocky.jpg" class="img2" alt="Poster de Rocky" onclick="abrirModal('modal-rocky')" />
+          <div class="janela-modal" id="modal-rocky" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-rocky')">X</button>
+              <div class="img-modal">
+                    <img src="./img/rocky-poster.jpg" alt="rocky">
+                </div>
+              <div class="nomefilme">
+                <h2>Rocky</h2>
+                <p class="descricao_filme">Rocky (1976): É um drama esportivo sobre Rocky Balboa, um boxeador amador de
+                  Filadélfia que recebe uma chance inesperada de lutar pelo título mundial dos pesos pesados contra o
+                  campeão Apollo Creed. Sem grandes expectativas, Rocky se dedica ao treinamento, mostrando sua
+                  determinação e perseverança. O filme foca na luta de Rocky não apenas no ringue, mas também em sua
+                  vida pessoal e relacionamento com Adrian. Rocky é uma história inspiradora de superação, que se tornou
+                  um clássico do cinema e venceu 3 Oscars, incluindo Melhor Filme.</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/-Hk-LYcavrw?si=VHpJFouOLVnNRFqj" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-rocky.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/the_batman.webp" class="img2" alt="Poster de The Batman"
+            onclick="abrirModal('modal-batman')" />
+          <div class="janela-modal" id="modal-batman" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-batman')">X</button>
+              <div class="img-modal">
+                    <img src="./img/the_batman.jpg" alt="batman">
+                </div>
+              <div class="nomefilme">
+                <h2>The Batman</h2>
+                <p class="descricao_filme">The Batman (2022): É uma versão mais sombria e realista do herói, dirigida
+                  por Matt Reeves. A história segue um Bruce Wayne (Robert Pattinson) no segundo ano de sua jornada como
+                  Batman, investigando uma série de assassinatos em Gotham, cometidos pelo misterioso Riddler (Paul
+                  Dano). O filme foca no lado detetive de Batman e na corrupção da cidade, enquanto ele luta com sua
+                  identidade e o legado de sua família. Com temas de vingança e justiça, The Batman traz um tom mais
+                  sombrio e psicológico, destacando a complexidade do personagem.</p>
+                <div style="text-align:center; margin-top: 20px;">
+                  <a href="https://youtu.be/rsQEor4y2hg?si=gXaNMhBCxRnAJ12q" target="_blank" class="botao-filme">
+                    Assistir Trailer
+                  </a>
+                  <a href="link-da-pagina-do-filme-batman.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/interstelar.jpg" class="img2" alt="Poster de Interestelar"
+            onclick="abrirModal('modal-interstelar')" />
+          <div class="janela-modal" id="modal-interstelar" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-interstelar')">X</button>
+              <div class="img-modal">
+                    <img src="./img/interstellar_img.webp" alt="interstelar">
+                </div>
+              <div class="nomefilme">
+                <h2>Interestelar</h2>
+                <p class="descricao_filme">Interestelar (2014):
+                  No futuro, a Terra sofre com uma crise ambiental. Cooper, ex-piloto da NASA, é chamado para liderar uma missão em busca de um novo planeta habitável. Ele viaja por um buraco de minhoca, enquanto sua filha Murph tenta salvar a humanidade da Terra. O filme mistura ciência, emoção e o tema do tempo.</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/i6avfCqKcQo?si=EOFEeEsn-PRd1RX2" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-interestelar.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/anabelle.webp" class="img2" alt="Poster de Anabelle" onclick="abrirModal('modal-anabelle')" />
+          <div class="janela-modal" id="modal-anabelle" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-annabelle')">X</button>
+              <div class="img-modal">
+                    <img src="./img/annabelle-poster.jpg" alt="Annabelle">
+                </div>
+              <div class="nomefilme">
+                <h2>Annabelle</h2>
+                <p class="descricao_filme">Annabelle (2014): Um casal jovem espera o primeiro bebê quando uma boneca
+                  antiga se torna o foco de eventos paranormais assustadores. À medida que a presença maligna se
+                  manifesta, eles enfrentam terrores que ameaçam sua família. O filme explora o medo do desconhecido e o
+                  poder do sobrenatural, sendo um prelúdio da franquia Invocação do Mal.</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/kHl6aU30pIo?si=afNXVlnEWBGMW0pe" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-annabelle.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/coringa.jpg" class="img2" alt="Poster de Coringa 2" onclick="abrirModal('modal-coringa')" />
+          <div class="janela-modal" id="modal-coringa" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-coringa')">X</button>
+              <div class="img-modal">
+                    <img src="./img/coringa-poster.jpg" alt="coringa 2">
+                </div>
+              <div class="nomefilme">
+                <h2>Coringa: Delírio a Dois</h2>
+                <p class="descricao_filme">Coringa: Delírio a Dois (2024): Continuação do drama psicológico que explora
+                  a complexa mente de Arthur Fleck, o icônico Coringa. O filme aprofunda os conflitos internos do
+                  personagem e sua relação intensa com Harley Quinn, mostrando como juntos eles mergulham no caos de
+                  Gotham. A narrativa aborda temas de saúde mental, amor tóxico, e a espiral da violência, em um
+                  thriller psicológico sombrio e envolvente.</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/_OKAwz2MsJs?si=yNHpYyAJC8VQc7Ht" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-coringa.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="container">
+          <img src="./img/deadpool e wolverine.jpg" class="img2" alt="Poster de deadpool"
+            onclick="abrirModal('modal-deadpool')" />
+          <div class="janela-modal" id="modal-deadpool" role="dialog" aria-modal="true">
+            <div class="modal">
+              <button class="fechar" aria-label="Fechar modal" onclick="fecharModal('modal-deadpool')">X</button>
+              <div class="img-modal">
+                    <img src="./img/Deadpool-Wolverine-poster.jpg" alt="deadpool e wolverine">
+                </div>
+              <div class="nomefilme">
+                <h2>Deadpool & Wolverine</h2>
+                <p class="descricao_filme">Deadpool & Wolverine(2024)Este filme marca a união dos dois personagens no
+                  MCU. Wade Wilson (Deadpool) é retirado de sua vida tranquila pela Autoridade de Variância Temporal
+                  (AVT) e se junta a um relutante Wolverine de outro universo para impedir a destruição de seu mundo. A
+                  trama mistura ação, humor irreverente e referências ao multiverso, trazendo uma nova dinâmica para o
+                  MCU</p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="https://youtu.be/73_1biulkYk?si=KRRBcCElZDx4rUKe" target="_blank" class="botao-filme">
+                      Assistir Trailer
+                    </a>
+                    <a href="link-da-pagina-do-filme-deadpool-wolverine.html" target="_blank" class="botao-filme">Ir para o filme</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <script src="script.js"></script>
+      </div>
+    </div>
+    <button class="btn-carrossel direita" onclick="scrollCarrossel(1)">❯</button>
+  </section>
+
+  <!-- ... conteúdo dos planos ... -->
+  <section class="container2">
+    <div class="retangulo">
+      <h3>ASSISTA ONDE QUISER</h3>
+      <p><br>Em Smart TVs, Tablet, Celular, Computador, Notebook.</p>
+    </div>
+    <div class="retangulo">
+      <h3>BAIXE FILMES E SÉRIES</h3>
+      <p><br>Salve seus títulos favoritos e assista aonde quiser.</p>
+    </div>
+    <div class="retangulo">
+      <h3>ESCOLHA O PLANO IDEAL</h3>
+      <p><br>Com opções mensais, você tem total liberdade para aproveitar o melhor do entretenimento.</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="about-content">
+      <h2>Sobre a Iris</h2>
+      <p>A Iris é uma plataforma de streaming começando no mercado, oferecendo uma ampla variedade de filmes, séries,
+        documentários e conteúdos originais premiados.</p>
+      <p>Fundada em 2025, nossa empresa cresceu rapidamente para se tornar uma das mais influentes no setor de
+        entretenimento digital, com presença em mais de 190 países.</p>
+      <p>Nossa missão é entreter o mundo. Contamos histórias que movem, inspiram e divertem pessoas de todas as idades e
+        culturas.</p>
+      <p>Com tecnologia de ponta, oferecemos a melhor qualidade de streaming adaptável a qualquer dispositivo,
+        garantindo uma experiência imersiva para nossos assinantes.</p>
+      <p>Nossos conteúdos já receberam mais de 300 prêmios internacionais, incluindo Emmys, Globos de Ouro e Oscars.</p>
+      <p>Criado e imaginado inteiramente pelos alunos, Diogo Bello, Breno Morais, Italo Romulo e Luiz Guilherme.</p>
+    </div>
+    <footer>
+      <p>© 2025 IRIS. Todos os direitos reservados.</p>
+    </footer>
+  </section>
+
+  <script src="nos.js"></script>
+</body>
+
+</html>

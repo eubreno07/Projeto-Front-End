@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOGIN</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="LOGIN.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">IRIS</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </header>
+
+  <main class="container">
+    <!-- ✱ IDs corrigidos -->
+    <form id="form-login">
+      <h1>LOGIN</h1>
+
+      <div class="input-box">
+        <input id="login" name="login" type="text" placeholder="Usuário" required />
+        <i class="bx bxs-user"></i>
+      </div>
+
+      <div class="input-box">
+        <input id="senha" name="senha" type="password" placeholder="Senha" required />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+
+      <div class="lembrar-senha">
+        <label>
+          <input id="lembrar" type="checkbox" />
+          Lembrar senha
+        </label>
+        <a href="#">Esqueci a senha</a>
+      </div>
+
+      <button type="submit" class="login">ENTRAR</button>
+
+      <div class="registro">
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    // Carrega lista de usuários previamente cadastrados ou cria array vazio
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Intercepta o envio do formulário
+    document.getElementById("form-login").addEventListener("submit", (e) => {
+      e.preventDefault(); // evita recarregar página
+
+      const loginInput = document.getElementById("login").value.trim();
+      const senhaInput = document.getElementById("senha").value;
+
+      // Procura usuário válido
+      const usuarioEncontrado = usuarios.find(
+        (u) => u.login === loginInput && u.senha === senhaInput
+      );
+
+      if (usuarioEncontrado) {
+        if (document.getElementById("lembrar").checked) {
+          localStorage.setItem("usuarioLogado", JSON.stringify(usuarioEncontrado));
+        }
+        alert("Login efetuado com sucesso!");
+        window.location.href = 'series.html'
+      } else {
+        alert("Usuário ou senha incorretos.");
+      }
+    });
+
+    /* (Opcional) alternância de tema claro/escuro */
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>

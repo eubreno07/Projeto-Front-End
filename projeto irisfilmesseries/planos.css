@@ -1,0 +1,163 @@
+/* ===== IMPORTAÇÕES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== NAVBAR (COM FONTE POETSEN ONE) ===== */
+header {
+    font-family: "Poetsen One", sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: rgb(0, 122, 204);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: rgb(0, 122, 204);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(0, 122, 204, 0.2);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: rgb(0, 122, 204);
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 122, 204, 0.2);
+}
+
+/* ===== SEÇÃO DE PLANOS (FONTE PADRÃO) ===== */
+.plans-section {
+    padding: 100px 50px 50px; /* Ajuste para navbar fixa */
+    background-color: var(--bg-secondary, #f5f5f5); /* Fallback */
+}
+
+.plans-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--accent-color, #333); /* Fallback */
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    background-color: var(--bg-tertiary, #fff); /* Fallback */
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: var(--shadow-medium, 0 4px 6px rgba(0,0,0,0.1)); /* Fallback */
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-large, 0 10px 20px rgba(255, 255, 255, 0.15)); /* Fallback */
+}
+
+.plan-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--accent-color, #0066cc); /* Fallback */
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-secondary, #666); /* Fallback */
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.features li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Destaques dos Planos */
+.basic { border-top: 4px solid #4CAF50; }
+.top { border-top: 4px solid var(--accent-color, #0066cc); }
+.premium { border-top: 4px solid #FFD700; }
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: var(--accent-color, #0066cc);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Botão genérico (ajustado para fonte padrão) */
+.plan-btn {
+    width: 100%;
+    margin-top: auto;
+    font-family: inherit; /* Herda a fonte do elemento pai */
+}
+
+a{
+    color: #fff;
+}

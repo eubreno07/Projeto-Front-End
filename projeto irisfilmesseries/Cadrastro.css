@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial, sans-serif";
+
+}
+/* ===== NAVBAR ===== */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: rgb(0, 122, 204); /* Azul */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: rgb(0, 122, 204); /* Alterado para azul */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+        background-color: rgba(0, 122, 204, 0.2); /* Fundo azul transparente */
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: rgb(0, 122, 204); /* Alterado para azul */
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+/* ===== FORMULÁRIO DE CADASTRO ===== */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(./img/BR-pt-20200706-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: 140% 100%;
+    animation: anima 60s infinite linear alternate;
+    padding-top: 80px; /* Espaço para a navbar */
+}
+
+.container {
+    height: 980px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    padding: 70px 40px;
+    box-shadow: 0 0 20px rgba(65,62,62);
+    animation: iniciar 1.5s ease-out;
+    pointer-events: all;
+    margin-top: 20px;
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align:center;
+}
+
+.input-box {
+    position:relative;
+    width: 50px 50px;
+    height: 45px;
+    margin: 15px 0px ;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: rgb(149, 149, 180);
+}
+
+.input-box i {
+    color: rgb(149, 149, 180);
+    position: absolute;
+    right: 20px;
+    top: 28%;
+    font-size: 20px;
+}
+
+.criar {
+    border: none;
+    margin: 15px 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 45px;
+    width: 85%;
+    background-color: rgba(91, 91, 107, 0.5);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.criar:hover {
+    background-color: rgb(11, 6, 36);
+    transition: 0.3s;
+} 
+
+.entrar {
+    font-size: 15px;
+    text-align: center;
+    margin: 5px 0px 15px;
+}
+
+.entrar a {
+    text-decoration: none;
+    color: rgb(18, 6, 192);
+    font-weight: 550;
+}
+
+.entrar a:hover {
+    text-decoration: underline;
+}
+
+.voltar a {
+    margin: 120px;
+    padding: 5px 8px;
+    border-radius: 50px;
+    background-color: rgba(56, 57, 61, 0.8);
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes anima {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+@keyframes iniciar {
+    0% {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#mensagem {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+  }
+  
